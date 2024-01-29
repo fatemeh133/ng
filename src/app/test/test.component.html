@@ -1,5 +1,13 @@
 <h2>Hi</h2>
-<button class="btn btn-danger" [disabled]="btnDisabled" (click)="clickEvent()">
+<div [ngStyle]="{ 'background-color': getColor() }" style="display: inline">
+  {{ stat }}
+</div>
+<button
+  *ngIf="false"
+  class="btn btn-danger"
+  [disabled]="btnDisabled"
+  (click)="clickEvent()"
+>
   Danger
 </button>
 <button
