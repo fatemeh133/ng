@@ -1,0 +1,9 @@
+<h2>Hi</h2>
+<button class="btn btn-danger" [disabled]="btnDisabled" (click)="clickEvent()">
+  Danger
+</button>
+<input [type]="inputType" (blur)="logValue($event)" />
+<input type="text" placeholder="show" [(ngModel)]="inputValue" />
+<p>{{ inputValue }}</p>
+<div>my id is {{ getID() }} and my name is {{ name }}</div>
+<img [src]="imgUrl" />
