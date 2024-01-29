@@ -2,8 +2,20 @@
 <button class="btn btn-danger" [disabled]="btnDisabled" (click)="clickEvent()">
   Danger
 </button>
-<input [type]="inputType" (blur)="logValue($event)" />
-<input type="text" placeholder="show" [(ngModel)]="inputValue" />
+<button
+  class="btn btn-primary"
+  id="reset"
+  [disabled]="inputValue === ''"
+  (click)="inputValue = ''"
+>
+  Reset
+</button>
+<input
+  [type]="inputType"
+  (blur)="logValue($event)"
+  placeholder="this text wil alert on blur"
+/>
+<input type="text" placeholder="show in p" [(ngModel)]="inputValue" />
 <p>{{ inputValue }}</p>
 <div>my id is {{ getID() }} and my name is {{ name }}</div>
 <img [src]="imgUrl" />
