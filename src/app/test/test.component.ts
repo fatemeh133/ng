@@ -13,6 +13,8 @@ export class TestComponent {
   inputType: string = 'text';
   inputValue: string = '';
   stat: string = '';
+  isDisplay: boolean = false;
+  numArray: number[] = [];
   imgUrl: string =
     'https://us.123rf.com/450wm/cc0collection/cc0collection2205/cc0collection220540385/186116070-dark-room-people-woman-girl-photography-photographer-camera-lens-outdoor-travel.jpg?ver=6';
   constructor() {
@@ -35,5 +37,16 @@ export class TestComponent {
 
   getColor() {
     return this.stat === 'online' ? 'green' : 'red';
+  }
+  showDanger() {
+    return this.stat === 'online' ? false : true;
+  }
+
+  display() {
+    this.isDisplay = !this.isDisplay;
+    console.log(this.isDisplay);
+
+    this.numArray.push(this.numArray.length + 1);
+    console.log(this.numArray.length);
   }
 }

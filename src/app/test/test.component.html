@@ -1,9 +1,13 @@
-<h2>Hi</h2>
-<div [ngStyle]="{ 'background-color': getColor() }" style="display: inline">
+<h2 (click)="showDanger()">Hi</h2>
+<div
+  [ngStyle]="{ 'background-color': getColor() }"
+  [ngClass]="{ online: this.stat === 'online' }"
+  style="display: inline"
+>
   {{ stat }}
 </div>
 <button
-  *ngIf="false"
+  *ngIf="showDanger()"
   class="btn btn-danger"
   [disabled]="btnDisabled"
   (click)="clickEvent()"
@@ -26,4 +30,16 @@
 <input type="text" placeholder="show in p" [(ngModel)]="inputValue" />
 <p>{{ inputValue }}</p>
 <div>my id is {{ getID() }} and my name is {{ name }}</div>
-<img [src]="imgUrl" />
+<img [src]="imgUrl" style="width: 140px" />
+<button
+  type="button"
+  class="btn btn-warning"
+  style="display: block; margin-top: 20px"
+  (click)="display()"
+>
+  Display details
+</button>
+<p *ngIf="isDisplay">password:123</p>
+<div *ngFor="let item of numArray; let i = index" [ngClass]="{ blue: i > 5 }">
+  {{ item }}
+</div>
