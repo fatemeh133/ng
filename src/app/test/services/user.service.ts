@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { LogService } from './log.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
   names: string[] = ['ali'];
-  constructor() {}
+  constructor(private logService: LogService) {}
   getdata() {
     console.log('LOG FROM SERVICE');
   }
@@ -18,5 +19,6 @@ export class UserService {
   }
   showName() {
     console.log(this.names);
+    this.logService.logText();
   }
 }

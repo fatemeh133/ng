@@ -11,9 +11,10 @@ import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './test/Directive/highlight.directive';
 import { RendererHilightDirective } from './test/Directive/renderer-hilight.directive';
 import { HideAfterDirective } from './test/Directive/hide-after.directive';
+import { Test2Component } from './test2/test2.component';
 
 @NgModule({
-  declarations: [AppComponent, TestComponent, RendererHilightDirective, HideAfterDirective],
+  declarations: [AppComponent, TestComponent, RendererHilightDirective, HideAfterDirective, Test2Component],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HighlightDirective],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],

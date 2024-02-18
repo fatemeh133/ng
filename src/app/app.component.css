@@ -1,0 +1,10 @@
+a {
+  margin: 10px;
+  padding: 4px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.active {
+  color: black;
+  background-color: gray;
+}
