@@ -1,7 +1,18 @@
 <h1>welcome</h1>
+<input type="text" placeholder="Enter name" #name />
+<button (click)="setData(name.value)">Add to list</button>
+<button (click)="showData()">Show List</button>
+<hr />
 <app-test></app-test>
 <!-- <div class="app-test"></div> -->
 <!-- <div app-test></div> -->
 <p appHighlight>Highlight me!</p>
 <p appRendererHilight>Highlight me with renderer!</p>
-<p *appHideAfter>GoodBye</p>
+<p *appHideAfter="2000; then appear; atend: 'Hi apeared'">GoodBye</p>
+<ng-template #appear><p>HI</p></ng-template>
+
+<div [ngSwitch]="loopVar">
+  <p *ngSwitchCase="5">Im 5</p>
+  <p *ngSwitchCase="6">Im 6</p>
+</div>
+<button (click)="getService()">log from API</button>
