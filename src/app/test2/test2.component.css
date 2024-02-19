@@ -1,0 +1,16 @@
+a {
+  margin-right: 10px;
+  background-color: burlywood;
+  padding: 4px;
+  border-radius: 4px;
+}
+a:hover {
+  cursor: pointer;
+}
+li:hover {
+  cursor: pointer;
+  color: black;
+}
+li {
+  color: cornflowerblue;
+}

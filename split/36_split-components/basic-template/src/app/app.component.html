@@ -1,0 +1,19 @@
+<div class="container">
+  <app-inputs
+    (serverEvent)="onAddServer2($event)"
+    (bluePrintEvent)="onAddBlueprint2($event)"
+  ></app-inputs>
+  <hr />
+  <div class="row">
+    <div class="col-xs-12">
+      <app-output *ngFor="let Element of serverElements" [element]="Element">
+        <p>
+          <strong *ngIf="Element.type === 'server'" style="color: red">{{
+            Element.content
+          }}</strong>
+          <em *ngIf="Element.type === 'blueprint'">{{ Element.content }}</em>
+        </p>
+      </app-output>
+    </div>
+  </div>
+</div>

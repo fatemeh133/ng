@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 const routes: Routes = [
   { path: '', redirectTo: '/Test2', pathMatch: 'full' },
   { path: 'Test2', component: Test2Component },
+  { path: 'Test2/:id', component: Test2Component },
   { path: 'Test', component: TestComponent },
   { path: '**', component: NotFoundComponent },
 ];

@@ -1,1 +1,16 @@
-<p style="background-color: orange">test2 routing works!</p>
+<div style="background-color: antiquewhite">
+  <p style="background-color: orange">test2 routing works!</p>
+
+  <ul>
+    <li *ngFor="let tool of frontTools" (click)="details(tool.id)">
+      {{ tool.id }} {{ tool.name }}
+    </li>
+  </ul>
+  <p>item ID is: {{ toolID }}</p>
+  <span *ngIf="toolID == 1">Angular is red</span>
+  <span *ngIf="toolID == 2">React is blue</span>
+  <div>
+    <a (click)="goPrev()">Prev</a> <a (click)="goNext()">Next</a
+    ><a (click)="goBack()">Back</a>
+  </div>
+</div>
