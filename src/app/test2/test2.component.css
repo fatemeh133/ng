@@ -14,3 +14,6 @@ li:hover {
 li {
   color: cornflowerblue;
 }
+.selected {
+  color: rgb(136, 40, 131);
+}
