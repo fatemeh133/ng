@@ -5,14 +5,14 @@ import { LogService } from '../services/log.service';
   selector: 'app-sub-page',
   templateUrl: './sub-page.component.html',
   styleUrl: './sub-page.component.css',
-
 })
 export class SubPageComponent implements OnInit {
-  constructor(private dataService: LogService) {}
-  text: string = 'mmm';
+  constructor(private logService: LogService) {}
+  text: string = 'kk';
+
   ngOnInit() {
-    // this.dataService.emitter.subscribe((val) => {
-    //   this.text = val;
-    // });
+    this.logService.emitter.subscribe((val) => {
+      this.text = val;
+    });
   }
 }

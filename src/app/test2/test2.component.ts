@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { log } from 'console';
 import { LogService } from '../services/log.service';
+
 type frontTools = [{ id: number; name: string }];
 @Component({
   selector: 'app-test2',
@@ -19,7 +19,7 @@ export class Test2Component implements OnInit {
   constructor(
     private router: Router,
     private ActiveRoute: ActivatedRoute,
-    private dataService: LogService
+    private LogService: LogService
   ) {
     console.log(this.toolID);
   }
@@ -57,7 +57,9 @@ export class Test2Component implements OnInit {
       relativeTo: this.ActiveRoute,
     });
   }
-  // sendDataToService() {
-  //   this.dataService.emiterfunc(this.inputText);
-  // }
+  sendInputValue() {
+    console.log(this.inputText);
+
+    this.LogService.emiterfunc(this.inputText);
+  }
 }

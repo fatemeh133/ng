@@ -9,7 +9,7 @@ export class LogService {
   logText() {
     console.log('log service works');
   }
-  // emiterfunc(value: string) {
-  //   this.emitter.emit(value);
-  // }
+  emiterfunc(value: string) {
+    this.emitter.emit(value);
+  }
 }
