@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { LogService } from '../services/log.service';
+import { interval, Subscription } from 'rxjs';
 
 type frontTools = [{ id: number; name: string }];
 @Component({
@@ -15,6 +16,7 @@ export class Test2Component implements OnInit {
   ];
   toolID: number = 0;
   inputText: string = '';
+  inter: any;
 
   constructor(
     private router: Router,
@@ -22,6 +24,7 @@ export class Test2Component implements OnInit {
     private LogService: LogService
   ) {
     console.log(this.toolID);
+    const inter = interval(1000);
   }
 
   details(id: number) {
@@ -61,5 +64,15 @@ export class Test2Component implements OnInit {
     console.log(this.inputText);
 
     this.LogService.emiterfunc(this.inputText);
+  }
+  subscribe() {
+    this.inter.subscribe({
+      next: (val: any) => {
+        console.log(val);
+      },
+    });
+  }
+  unsubscribe() {
+    this.inter.unsubscribe();
   }
 }
