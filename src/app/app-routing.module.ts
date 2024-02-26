@@ -5,6 +5,7 @@ import { Test2Component } from './test2/test2.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AppComponent } from './app.component';
 import { SubPageComponent } from './sub-page/sub-page.component';
+import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/Test2Page', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
     children: [{ path: 'sub-page', component: SubPageComponent }],
   },
   { path: 'Test', component: TestComponent },
+  { path: 'form', component: FormComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

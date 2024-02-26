@@ -1,0 +1,14 @@
+<form (ngSubmit)="onsubmit(f)" #f="ngForm">
+  <label for="username">username</label
+  ><input ngModel name="username" id="username" type="text" />
+  <br />
+  <label for="email">email</label>
+  <input id="email" ngModel name="email" type="email" />
+  <br />
+  <select ngModel name="select">
+    <option value="selectone">selectone</option>
+    <option value="selecttwo">selecttwo</option>
+    <option value="selectthree">selectthree</option>
+  </select>
+  <button type="submit">submit</button>
+</form>
