@@ -6,6 +6,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AppComponent } from './app.component';
 import { SubPageComponent } from './sub-page/sub-page.component';
 import { FormComponent } from './form/form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/Test2Page', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   },
   { path: 'Test', component: TestComponent },
   { path: 'form', component: FormComponent },
+  { path: 'reactiveform', component: ReactiveFormComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

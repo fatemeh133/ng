@@ -15,9 +15,10 @@ import { Test2Component } from './test2/test2.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SubPageComponent } from './sub-page/sub-page.component';
 import { FormComponent } from './form/form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
-  declarations: [AppComponent, TestComponent, RendererHilightDirective, HideAfterDirective, Test2Component, NotFoundComponent, SubPageComponent, FormComponent],
+  declarations: [AppComponent, TestComponent, RendererHilightDirective, HideAfterDirective, Test2Component, NotFoundComponent, SubPageComponent, FormComponent, ReactiveFormComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HighlightDirective],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
