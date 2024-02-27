@@ -1,14 +1,27 @@
 <form (ngSubmit)="onsubmit()" #f="ngForm">
-  <label for="username">username</label
+  <label for="username">Username</label
   ><input ngModel required name="username" id="username" type="text" />
   <br />
-  <label for="email">email</label>
-  <input id="email" ngModel required email name="email" type="email" />
+  <label for="email">Email</label>
+  <input
+    id="email"
+    [ngModel]="exampleEmail"
+    required
+    email
+    name="email"
+    type="email"
+    #email="ngModel"
+  />
+  <p style="color: red; margin: 0" *ngIf="!email.valid && email.touched">
+    Enter correct email!
+  </p>
   <br />
-  <select ngModel name="select">
+  <select ngModel name="select" [ngModel]="defaultOption">
     <option value="selectone">selectone</option>
     <option value="selecttwo">selecttwo</option>
     <option value="selectthree">selectthree</option>
   </select>
+  <input type="text" [(ngModel)]="answer" name="questionInput" />
+  <p style="margin: 0">your answer: {{ answer }}</p>
   <button type="submit" [disabled]="!f.valid">submit</button>
 </form>

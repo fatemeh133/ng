@@ -8,6 +8,9 @@ import { NgForm } from '@angular/forms';
 })
 export class FormComponent {
   @ViewChild('f') f: NgForm | null = null;
+  defaultOption = 'selectthree';
+  exampleEmail = 'test@email.com';
+  answer = 'ff';
   onsubmit() {
     console.log('submited..');
     console.log(this.f);
