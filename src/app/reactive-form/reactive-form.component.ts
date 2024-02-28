@@ -1,20 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
+import { log } from 'node:console';
 
 @Component({
   selector: 'app-reactive-form',
   templateUrl: './reactive-form.component.html',
-  styleUrl: './reactive-form.component.css',
+  styleUrls: ['./reactive-form.component.css'],
 })
 export class ReactiveFormComponent implements OnInit {
   genders = ['male', 'female'];
-  formG: FormGroup;
 
-  ngOnInit() {
-    this.formG = new FormGroup({
-      username: new FormControl('s'),
-      email: new FormControl('s@'),
-      gender: new FormControl('female'),
-    });
+  profileForm = new FormGroup({
+    username: new FormControl(''),
+    email: new FormControl(''),
+    gender: new FormControl(''),
+  });
+
+  ngOnInit() {}
+  onSubmit() {
+    console.log(this.profileForm);
   }
 }
